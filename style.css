@@ -206,6 +206,9 @@ h2 {
 
 /* Responsive Design */
 
+
+/* Responsive Design */
+
 @media (max-width: 768px) {
     .container {
         padding: 10px;
@@ -219,6 +222,85 @@ h2 {
     }
     .message {
         font-size: 16px;
+    }
+    .valentines-card h1 {
+        font-size: 24px;
+    }
+    .photo-card img,
+    .photo-card video {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        width: 90%;
+        padding: 20px;
+    }
+    .valentines-card {
+        padding: 15px;
+    }
+    .valentines-card h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .message {
+        font-size: 14px;
+        margin: 10px 0;
+        padding: 8px;
+    }
+    .love-quote {
+        font-size: 18px;
+        margin: 20px 0;
+    }
+    .date-counter {
+        font-size: 14px;
+    }
+    .memory h3 {
+        font-size: 1.2em;
+    }
+    .memory p {
+        font-size: 14px;
+    }
+    .memory-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+    }
+    .input-field {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .login-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+    .valentines-card h1 {
+        font-size: 18px;
+    }
+    .message {
+        font-size: 12px;
+        padding: 6px;
+    }
+    .love-quote {
+        font-size: 16px;
+    }
+    .memory h3 {
+        font-size: 1em;
+    }
+    .memory p {
+        font-size: 12px;
+    }
+    .memory-btn {
+        width: 30px;
+        height: 30px;
+    }
+    .date-counter {
+        font-size: 12px;
     }
 }
 
