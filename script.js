@@ -27,7 +27,22 @@ particlesJS('particles-js', {
         }
     }
 });
+// Autoplay music
+document.addEventListener('DOMContentLoaded', function() {
+    const bgMusic = document.getElementById('bgMusic');
 
+    // Mencoba autoplay saat halaman dimuat
+    bgMusic.play().catch(function(error) {
+        console.log("Autoplay prevented");
+    });
+
+    // Mencoba play music saat ada interaksi user pertama kali
+    document.body.addEventListener('click', function() {
+        bgMusic.play().catch(function(error) {
+            console.log("Playback failed");
+        });
+    }, { once: true });
+});
 // Floating hearts animation
 function createHeart() {
     const heart = document.createElement('div');
@@ -61,7 +76,7 @@ setInterval(createRosePetals, 2000);
 
 // Memory navigation and Content
 let currentMemory = 1;
-const totalMemories = 3;
+const totalMemories = 4;
 
 const passwordContent = {
     'i': {
@@ -75,6 +90,10 @@ const passwordContent = {
                 text: "Every second with you is precious... 💕"
             },
             memory3: {
+                title: "Chat with Me",
+                text: "Click here to send me a message... 💌"
+            },
+            memory4: {
                 title: "Chat with Me",
                 text: "Click here to send me a message... 💌"
             }
@@ -102,6 +121,10 @@ const passwordContent = {
             memory3: {
                 title: "Send Love",
                 text: "Let me know what you think... 💕"
+            },
+            memory4: {
+                title: "Chat with Me",
+                text: "Click here to send me a message... 💌"
             }
         },
         messages: [
@@ -114,7 +137,7 @@ const passwordContent = {
         whatsapp: 'https://wa.me/6285331086754',
         startDate: '2023-12-25'
     },
-    'kontol': {
+    'you': {
         memories: {
             memory1: {
                 title: "Our Journey",
@@ -127,6 +150,10 @@ const passwordContent = {
             memory3: {
                 title: "Message Me",
                 text: "Share your thoughts with me... 💌"
+            },
+            memory4: {
+                title: "Chat with Me",
+                text: "Click here to send me a message... 💌"
             }
         },
         messages: [
@@ -203,6 +230,10 @@ function checkLogin() {
             <h3>${content.memories.memory3.title}</h3>
             <p>${content.memories.memory3.text}</p>
         `;
+        document.getElementById('memory4').innerHTML = `
+        <h3>${content.memories.memory4.title}</h3>
+        <p>${content.memories.memory4.text}</p>
+    `;
 
         // Update love quote
         document.querySelector('.love-quote').textContent = content.loveQuote;
@@ -237,7 +268,7 @@ function checkLogin() {
         });
 
         // Add click event to memory3
-        document.getElementById('memory3').addEventListener('click', () => {
+        document.getElementById('memory4').addEventListener('click', () => {
             window.location.href = content.whatsapp;
         });
 

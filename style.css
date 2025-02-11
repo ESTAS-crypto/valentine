@@ -632,11 +632,11 @@ h2 {
     box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4);
 }
 
-#memory3 {
+#memory4 {
     background: linear-gradient(45deg, #ff6b6b, #ff4757);
     color: white;
 }
 
-#memory3:hover {
+#memory4:hover {
     background: linear-gradient(45deg, #ff4757, #ff6b6b);
 }
