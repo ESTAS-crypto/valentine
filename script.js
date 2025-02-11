@@ -27,6 +27,21 @@ particlesJS('particles-js', {
         }
     }
 });
+// Kontrol musik saat tab/browser ditutup
+document.addEventListener('visibilitychange', function() {
+    const bgMusic = document.getElementById('bgMusic');
+    if (document.hidden) {
+        bgMusic.pause(); // Pause musik saat tab tidak aktif
+    } else {
+        bgMusic.play(); // Play musik saat tab aktif kembali
+    }
+});
+
+// Kontrol musik saat window ditutup
+window.addEventListener('beforeunload', function() {
+    const bgMusic = document.getElementById('bgMusic');
+    bgMusic.pause();
+});
 // Autoplay music
 document.addEventListener('DOMContentLoaded', function() {
     const bgMusic = document.getElementById('bgMusic');
