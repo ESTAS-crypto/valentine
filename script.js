@@ -27,20 +27,39 @@ particlesJS('particles-js', {
         }
     }
 });
-// Kontrol musik saat tab/browser ditutup
-document.addEventListener('visibilitychange', function() {
-    const bgMusic = document.getElementById('bgMusic');
-    if (document.hidden) {
-        bgMusic.pause(); // Pause musik saat tab tidak aktif
-    } else {
-        bgMusic.play(); // Play musik saat tab aktif kembali
-    }
-});
-
-// Kontrol musik saat window ditutup
+// Kontrol musik saat browser ditutup
 window.addEventListener('beforeunload', function() {
     const bgMusic = document.getElementById('bgMusic');
     bgMusic.pause();
+    localStorage.setItem('musicStopped', 'true');
+});
+
+// Cek status musik saat halaman dimuat
+document.addEventListener('DOMContentLoaded', function() {
+    const bgMusic = document.getElementById('bgMusic');
+
+    // Cek apakah sebelumnya browser ditutup
+    if (localStorage.getItem('musicStopped') === 'true') {
+        bgMusic.pause();
+    }
+
+    // Reset status musik
+    localStorage.removeItem('musicStopped');
+});
+
+// Kontrol musik saat tab tidak aktif
+document.addEventListener('visibilitychange', function() {
+    const bgMusic = document.getElementById('bgMusic');
+    if (document.hidden) {
+        bgMusic.pause();
+        localStorage.setItem('musicStopped', 'true');
+    } else {
+        if (localStorage.getItem('musicStopped') !== 'true') {
+            bgMusic.play().catch(function(error) {
+                console.log("Playback failed");
+            });
+        }
+    }
 });
 // Autoplay music
 document.addEventListener('DOMContentLoaded', function() {
