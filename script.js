@@ -114,7 +114,7 @@ const passwordContent = {
         whatsapp: 'https://wa.me/6285331086754',
         startDate: '2023-12-25'
     },
-    'you': {
+    'kontol': {
         memories: {
             memory1: {
                 title: "Our Journey",
@@ -136,7 +136,7 @@ const passwordContent = {
             "My heart belongs to you forever 💑"
         ],
         loveQuote: "Every beat of my heart whispers your name! 💖",
-        whatsapp: 'https://wa.me/6285891265045',
+        whatsapp: 'https://wa.me/6282139769677',
         startDate: '2023-11-11'
     }
 };
