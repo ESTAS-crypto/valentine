@@ -104,9 +104,9 @@ function createRosePetals() {
     setTimeout(() => petal.remove(), 10000);
 }
 
-// Start animations
-setInterval(createHeart, 300);
-setInterval(createRosePetals, 2000);
+// Kurangi frekuensi hearts dan rose petals
+setInterval(createHeart, 1000); // 1 detik
+setInterval(createRosePetals, 3000); // 3 detik
 
 // Memory navigation and Content
 let currentMemory = 1;
@@ -171,34 +171,34 @@ const passwordContent = {
         whatsapp: 'https://wa.me/6285331086754',
         startDate: '2023-12-25'
     },
-    'pidel': {
+    '30082024': {
         memories: {
             memory1: {
-                title: "Our Journey",
-                text: "Every step with you is an adventure... 💫"
+                title: "Perjalanan Kami",
+                text: "Setiap langkah bersamamu adalah sebuah petualangan... 💫"
             },
             memory2: {
-                title: "Together Forever",
-                text: "Building dreams with you... ✨"
+                title: "pernah bermimpi selamanya",
+                text: "Membangun mimpi bersamamu... ✨"
             },
             memory3: {
-                title: "Message Me",
-                text: "Share your thoughts with me... 💌"
+                title: "Pesan Saya",
+                text: "jaga diri kamu baik baik di sana...💌"
             },
             memory4: {
-                title: "Chat with Me",
-                text: "Click here to send me a message... 💌"
+                title: "kalau mau ngobrol",
+                text: "pencet tombol ini yaa... 💌"
             }
         },
         messages: [
-            "You're the missing piece to my puzzle 💫",
-            "My love grows stronger each passing day 💖",
-            "You're the reason for my happiness ⭐",
-            "My heart belongs to you forever 💑"
+            "Hallo selamat hari valentine ya...💫",
+            "aku harap kamu baik-baik saja di sana 💖",
+            "sekali lagi selamat hari valentine⭐",
+            "buat kamu orang yang kusayangi💑"
         ],
-        loveQuote: "Every beat of my heart whispers your name! 💖",
-        whatsapp: 'https://wa.me/6282139769677',
-        startDate: '2023-11-11'
+        loveQuote: "terkadang aku selalu mengingat moment kita dulu💖",
+        whatsapp: 'https://wa.me/62895385890629',
+        startDate: '2028-08-30'
     }
 };
 
@@ -344,8 +344,8 @@ function startDateCounter(startDate) {
 
         const counter = document.querySelector('.date-counter');
         counter.innerHTML = `
-            Our Love Story: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds
-            <br>of endless love ❤️
+            Kisah Cinta Kita: ${days} hari, ${hours} jam, ${minutes} menit, ${seconds} detik
+            <br>tentang kisah cinta kita ❤️
         `;
         counter.classList.add('text-glow');
     }
